@@ -1,0 +1,265 @@
+// varaiable declaration
+$font-stack: helvetica, sans-serif;
+$primary-color: white;
+// extended inheritance
+%default {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+%clearfix {
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+%right {
+    float: right;
+    display: inline;
+}
+%center {
+    text-align: center;
+    
+}
+%margin {
+    margin: 10px;
+}
+*{
+    @extend %default;
+}
+.top{
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(rgba(11, 9, 24, 0.8), rgba(11, 9, 24, 0.3)), url(coder.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+.budget{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    // border: 0.2px solid white;
+    border-radius: 5px;
+    width: 30%;
+    
+}
+.right{
+    @extend %right;
+}
+.budget__title{
+    @extend %center;
+    @extend %margin;
+    font-size: 20px;
+}
+.budget__value{
+    @extend %center;
+    @extend %margin;
+    font-size: 25px;
+}
+.budget__income{
+    background: grey;
+    position: relative;
+    padding: 10px;
+    @extend %margin;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.budget__income:hover{
+    background: cadetblue;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+.budget__income__text{
+    display: inline;
+    font-weight: bold;
+}
+.budget__income__value{
+    display: inline;
+    margin-left: 5px;
+}
+.budget__income__percentage{
+    display: inline;
+    margin-left: 5px;
+    font-size: 10px;
+}
+.budget__expenses{
+    background: grey;
+    position: relative;
+    padding: 10px;
+    @extend %margin;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.budget__expenses:hover{
+    background: #110505;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+.budget__expenses__text{
+    display: inline;
+    font-weight: bold;
+}
+.budget__expenses__value{
+    display: inline;
+    margin-left: 5px;
+}
+.budget__expenses__percentage{
+    display: inline;
+    margin-left: 5px;
+    font-size: 10px;
+}
+.bottom{
+    // background: orange;
+    width: 100%;
+    // padding: 5px;
+    position: relative;
+}
+.add{
+    background: #E4E5E6;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px
+}
+.add__container{
+    position: absolute;
+    left: 34.5%;
+    margin: 10px;
+}
+.add__type{
+    border: none;
+    color: grey;
+}
+.add__type:focus{
+    outline: none;
+    border: none;
+}
+.add__description{
+    border: none;
+    color: black
+}
+.add__description:focus{
+    outline: none;
+    border: none;
+}
+.add__value{
+    border: none;
+    color: black;
+}
+.add__value:focus{
+    outline: none;
+    border: none;
+}
+.add__btn{
+    border: none;
+    background: none;
+}
+.add__btn:focus{
+    border: none;
+    outline: none;
+}
+.add__fas{
+    color: green;
+}
+.container{
+    width: 70%;
+    // background: blue;
+    position: relative;
+    margin: 0 auto;
+    // padding: 5px;
+}
+.income{
+    width: 40%;
+    float: left;
+    // background: green;
+    margin: 10px;
+}
+
+.income__title{
+    color: cadetblue;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.income__list{
+    // background: maroon;
+    display: block;
+}
+.item{
+    background: #E4E5E6;
+    width: 100%;
+    margin-top: 10px;
+}
+.item__description{
+    display: inline;
+    color: black;
+}
+.income__item__value{
+    display: inline;
+    color: green;
+    margin-right: 10px;
+}
+.item__delete{
+    display: inline;
+}
+
+.item__delete__btn{
+    border: none;
+    background: none;
+    color: none;
+}
+.item__delete__btn:focus{
+    border: none;
+    outline: none;
+}
+.expenses{
+    width: 40%;
+    float: left;
+    // background: green;
+    margin: 10px;
+}
+
+.expenses__title{
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.expenses__list{
+    // background: maroon;
+}
+.item{
+    background: #E4E5E6;
+    width: 100%;
+    margin-top: 10px;
+}
+.item__description{
+    display: inline;
+    color: black;
+}
+.item__value{
+    display: inline;
+    color: red;
+    margin-right: 10px;
+}
+.item__delete{
+    display: inline;
+}
+.item__percentage{
+    display: inline;
+    color: red;
+    font-size: 10px;
+    margin-right: 10px;
+}
+// .item__delete__btn{
+//     border: none;
+//     background: none;
+// }
+.income__fas:hover{
+    color: red;
+    transition: 0.5s
+}
+.hide{
+
+}
