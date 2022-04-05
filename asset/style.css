@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 100% helvetica, sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+.container__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* .clearfix {
+    content: "";
+    display: table;
+    clear: both;
+    
+} */
+.top {
+  width: 100%;
+  background-image: linear-gradient(rgba(11, 9, 24, 0.8), rgba(11, 9, 24, 0.3)),
+    url(styles/coder.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.budget {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.budget__title,
+.budget__value,
+.budget__income {
+  margin: 0 0 1rem 0;
+}
+.budget__income,
+.budget__expenses {
+  background: grey;
+  width: 80%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.budget__income {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.budget__income:hover {
+  background: cadetblue;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+}
+.budget__income__text {
+  display: inline;
+  font-weight: bold;
+}
+.budget__income__value {
+  display: inline;
+  margin-left: 5px;
+}
+.budget__income__percentage {
+  display: inline;
+  margin-left: 5px;
+  font-size: 10px;
+}
+.budget__expenses {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.budget__expenses:hover {
+  background: #110505;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+}
+.budget__expenses__text {
+  display: inline;
+  font-weight: bold;
+}
+.budget__expenses__value {
+  display: inline;
+  margin-left: 5px;
+}
+.budget__expenses__percentage {
+  display: inline;
+  margin-left: 5px;
+  font-size: 10px;
+}
+.bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.add {
+  background: #e4e5e6;
+  width: 100%;
+  flex: 0 1 100%;
+  padding: 0.5rem;
+}
+.add__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.add__type {
+  flex: 0 1 20%;
+  margin: 0 0.5rem 0 0;
+}
+.select__input__container, .input__add__btn__container {
+  display: flex;
+  justify-content: center;
+  padding: .5rem;
+}
+.add__type {
+  border: none;
+  color: grey;
+  border: 1px solid rgb(63, 62, 62);
+}
+.add__type:focus {
+  outline: none;
+  border: none;
+}
+.add__description {
+  border: none;
+  color: black;
+  border: 1px solid gray;
+}
+.add__description:focus {
+  outline: none;
+  border: none;
+}
+.add__value {
+  border: none;
+  color: black;
+  border: 1px solid gray;
+  margin: 0 0.5rem 0 0;
+}
+.add__value:focus {
+  outline: none;
+  border: none;
+}
+.add__btn {
+  border: none;
+  background: none;
+}
+.add__btn:focus {
+  border: none;
+  outline: none;
+}
+.add__fas {
+  color: green;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.income,
+.expenses {
+  flex: 0 1 45%;
+  text-align: center;
+}
+
+.income__title {
+  color: cadetblue;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.income__list {
+  display: block;
+}
+.item {
+  background: #e4e5e6;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.item__description {
+  display: inline;
+  color: black;
+}
+.right {
+  display: flex;
+}
+.income__item__value {
+  display: inline;
+  color: green;
+  margin-right: 10px;
+}
+.item__delete {
+  display: inline;
+}
+
+.item__delete__btn {
+  border: none;
+  background: none;
+  color: none;
+}
+.item__delete__btn:focus {
+  border: none;
+  outline: none;
+}
+/* .expenses{
+} */
+
+.expenses__title {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* .expenses__list{
+} */
+
+.item__description {
+  display: inline;
+  color: black;
+}
+.item__value {
+  display: inline;
+  color: red;
+  margin-right: 10px;
+}
+.item__delete {
+  display: inline;
+}
+.item__percentage {
+  display: inline;
+  color: red;
+  font-size: 10px;
+  margin-right: 10px;
+  background-color: rgb(235, 140, 140);
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.income__fas:hover {
+  color: red;
+  transition: 0.5s;
+}
+@media only screen and (min-width: 475px) {
+  .add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 500px) {
+    .add__container {
+  flex-direction: row;
+}
+}
+@media screen and (min-width: 700px) {
+  .budget__expenses,
+  .budget__income {
+    width: 60%;
+  }
+  .container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .income {
+    margin: 0 0.5rem 0 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    justify-content: center;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container__wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
