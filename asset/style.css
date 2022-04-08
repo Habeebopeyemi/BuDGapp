@@ -49,11 +49,12 @@
 .budget__income {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  background: cadetblue;
 }
 .budget__income:hover {
-  background: cadetblue;
   transition: 0.3s;
   transition-delay: 0.2s;
+  background: #110505;
 }
 .budget__income__text {
   display: inline;
@@ -71,6 +72,7 @@
 .budget__expenses {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  background-color: #ff4059;
 }
 .budget__expenses:hover {
   background: #110505;
@@ -110,49 +112,46 @@
   flex: 0 1 20%;
   margin: 0 0.5rem 0 0;
 }
-.select__input__container, .input__add__btn__container {
+.select__input__container,
+.input__add__btn__container {
   display: flex;
   justify-content: center;
-  padding: .5rem;
+  padding: 0.5rem;
+}
+.add__type:focus, .add__description:focus, .add__value:focus{
+  border: 1px solid cadetblue;
 }
 .add__type {
   border: none;
   color: grey;
-  border: 1px solid rgb(63, 62, 62);
 }
 .add__type:focus {
   outline: none;
-  border: none;
 }
 .add__description {
   border: none;
   color: black;
-  border: 1px solid gray;
 }
 .add__description:focus {
   outline: none;
-  border: none;
 }
 .add__value {
   border: none;
   color: black;
-  border: 1px solid gray;
   margin: 0 0.5rem 0 0;
 }
 .add__value:focus {
   outline: none;
-  border: none;
 }
 .add__btn {
   border: none;
-  background: none;
+  /* background-color: cadetblue; */
 }
 .add__btn:focus {
-  border: none;
   outline: none;
 }
 .add__fas {
-  color: green;
+  color: cadetblue;
 }
 .container {
   width: 100%;
@@ -244,6 +243,12 @@
   color: red;
   transition: 0.5s;
 }
+.red {
+  color: #ff4059 !important;
+}
+.red-focus:focus {
+  border: 1px solid #ff4059 !important;
+}
 @media only screen and (min-width: 475px) {
   .add {
     display: flex;
@@ -252,9 +257,9 @@
   }
 }
 @media screen and (min-width: 500px) {
-    .add__container {
-  flex-direction: row;
-}
+  .add__container {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 700px) {
   .budget__expenses,
